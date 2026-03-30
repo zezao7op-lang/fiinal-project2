@@ -3,32 +3,20 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Landing Page",
-    desc: "A fully responsive product landing page with modern UI, smooth animations, and mobile-first design.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
+    title: "Food Lover Restaurant",
+    desc: "Restaurant landing page with hero image, menu sections, and responsive design.",
+    tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
-    github: "#",
+    github: "https://github.com/zezao7op-lang/on-site-10",
+    image: "/images/food-lover-cover.png",
   },
   {
-    title: "Portfolio Website",
-    desc: "A personal portfolio showcasing my work with a luxury black and gold aesthetic, built for my school project.",
-    tech: ["HTML5", "Tailwind CSS", "JavaScript"],
+    title: "Furni Interior Design",
+    desc: "Modern interior design studio landing page with product highlights and call-to-action buttons.",
+    tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
-    github: "#",
-  },
-  {
-    title: "Interactive Dashboard",
-    desc: "A responsive admin dashboard with charts, data tables, and dynamic content using Bootstrap components.",
-    tech: ["HTML5", "Bootstrap", "JavaScript"],
-    demo: "#",
-    github: "#",
-  },
-  {
-    title: "Weather App",
-    desc: "A clean weather application that fetches real-time data and displays forecasts with beautiful UI.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    demo: "#",
-    github: "#",
+    github: "https://github.com/zezao7op-lang/onsite-5",
+    image: "/images/furni-cover.png",
   },
 ];
 
@@ -68,12 +56,20 @@ const Projects = () => {
                 className="group bg-card border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden"
               >
                 {/* Project image placeholder */}
-                <div className="aspect-video bg-secondary/50 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
+                <div className="aspect-video overflow-hidden relative">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="bg-secondary/50 h-full w-full flex items-center justify-center">
                     <span className="font-display text-4xl text-primary/20">0{i + 1}</span>
                   </div>
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500" />
-                </div>
+                )}
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-500" />
+              </div>
 
                 <div className="p-8">
                   <h3 className="font-display text-xl font-semibold mb-3">{project.title}</h3>

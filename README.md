@@ -3,11 +3,10 @@
 ## Project Title
 Personal Portfolio Website
 
-## Screenshot
-![Portfolio Screenshot](https://via.placeholder.com/800x600?text=Portfolio+Screenshot)
+
 
 ## Live Demo
-[View Live Demo](https://your-deployed-url-here.netlify.app) <!-- Replace with your actual deployed URL -->
+[View Live Demo](https://mariem-sherif.netlify.app/) <!-- Replace with your actual deployed URL -->
 
 ## Technologies Used
 - **HTML5**: Semantic markup for structure
@@ -28,7 +27,7 @@ Personal Portfolio Website
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio-website.git
+   git clone https://github.com/zezao7op-lang/fiinal-project2
    cd portfolio-website
    ```
 
