@@ -8,7 +8,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
     github: "https://github.com/zezao7op-lang/on-site-10",
-    image: "/images/food-lover-cover.png",
+    image: "",
   },
   {
     title: "Furni Interior Design",
@@ -16,7 +16,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
     github: "https://github.com/zezao7op-lang/onsite-5",
-    image: "/images/furni-cover.png",
+    image: "images\Furni Interior Design.png",
   },
   {
     title: "MedAssist Guide Care",
@@ -24,7 +24,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
     github: "https://github.com/zezao7op-lang/medassist-guide-care/tree/main",
-    image: "/images/medassist-cover.png",
+    image: "images\MedAssist Guide Care.jpg",
   },
 ];
 
