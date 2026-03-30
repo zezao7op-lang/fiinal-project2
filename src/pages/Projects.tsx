@@ -8,7 +8,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
     github: "https://github.com/zezao7op-lang/on-site-10",
-    image: "",
+    image: "/images/Food Lover Restaurant.png",
   },
   {
     title: "Furni Interior Design",
@@ -16,7 +16,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
     github: "https://github.com/zezao7op-lang/onsite-5",
-    image: "images\Furni Interior Design.png",
+    image: "/images/Furni Interior Design.png",
   },
   {
     title: "MedAssist Guide Care",
@@ -24,7 +24,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     demo: "#",
     github: "https://github.com/zezao7op-lang/medassist-guide-care/tree/main",
-    image: "images\MedAssist Guide Care.jpg",
+    image: "/images/MedAssist Guide Care.jpg",
   },
 ];
 
@@ -69,7 +69,7 @@ const Projects = () => {
                 <div className="aspect-video overflow-hidden relative">
                 {project.image ? (
                   <img
-                    src={project.image}
+                    src={encodeURI(project.image)}
                     alt={`${project.title} screenshot`}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
