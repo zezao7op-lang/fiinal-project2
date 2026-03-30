@@ -18,7 +18,17 @@ const projects = [
     github: "https://github.com/zezao7op-lang/onsite-5",
     image: "/images/furni-cover.png",
   },
+  {
+    title: "MedAssist Guide Care",
+    desc: "Health guide website for medical assistance with accessible UI and care resources.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    demo: "#",
+    github: "https://github.com/zezao7op-lang/medassist-guide-care/tree/main",
+    image: "/images/medassist-cover.png",
+  },
 ];
+
+const placeholderImage = "https://via.placeholder.com/640x360?text=Project+Cover";
 
 const Projects = () => {
   return (
@@ -62,6 +72,12 @@ const Projects = () => {
                     src={project.image}
                     alt={`${project.title} screenshot`}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.src !== placeholderImage) {
+                        target.src = placeholderImage;
+                      }
+                    }}
                   />
                 ) : (
                   <div className="bg-secondary/50 h-full w-full flex items-center justify-center">
