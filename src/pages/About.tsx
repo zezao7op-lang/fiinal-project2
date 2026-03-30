@@ -8,6 +8,9 @@ const skills = [
   { name: "Tailwind CSS", level: 85 },
 ];
 
+const placeholderImage = "https://via.placeholder.com/400x500/D4A574/ffffff?text=Mariam";
+const mariamImage = "/images/mariem.jpeg";
+
 const About = () => {
   return (
     <div className="pt-24 pb-20">
@@ -41,16 +44,17 @@ const About = () => {
             >
               {/* Photo placeholder */}
               <div className="aspect-[3/4] bg-card border border-border relative overflow-hidden group">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 rounded-full border-2 border-primary/30 mx-auto mb-4 flex items-center justify-center">
-                      <span className="font-display text-3xl text-primary">M</span>
-                    </div>
-                    <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">
-                      Professional Photo
-                    </p>
-                  </div>
-                </div>
+                <img
+                  src={encodeURI(mariamImage)}
+                  alt="Mariam"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== placeholderImage) {
+                      target.src = placeholderImage;
+                    }
+                  }}
+                />
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-primary/40" />
               </div>
             </motion.div>
